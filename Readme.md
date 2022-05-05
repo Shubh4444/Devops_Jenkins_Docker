@@ -1,4 +1,4 @@
-# Jenkins Installation
+# J
 
 ## step 1
 ```
@@ -74,7 +74,7 @@ Enter the credentials you want to use for your Jenkins administrator, then Save 
 
 7. You should see a page that says Jenkins is ready! 
 
-# Deploy Site on Docker 
+# S 
 
 ## Step 1 - Create a Directory for the Website
 
@@ -115,7 +115,7 @@ curl localhost:80
 ```
 
 
-# Install Docker Engine
+# D
 
 ## 
 ------------
@@ -145,7 +145,7 @@ sudo docker run hello-world
 
 
 
-# Email Notification on docker
+# E
 ## step 1 Installing Email Extension Plugin.
 
 Open Jenkins using the following URL: http://localhost:8080/ on any browser (in this tutorial port 8071 is used).
