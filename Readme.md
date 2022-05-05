@@ -1,4 +1,4 @@
-# Jenkins
+# Jenkins Installation
 
 ## step 1
 ```
@@ -143,3 +143,47 @@ sudo docker run hello-world
 
 
 
+
+
+# Email Notification on docker
+## step 1 Installing Email Extension Plugin.
+
+Open Jenkins using the following URL: http://localhost:8080/ on any browser (in this tutorial port 8071 is used).
+
+Click on Manage Jenkins.
+
+Click on Manage Plugins.
+
+Select Email Extension and Email Extension Template Plugin and click Install Without Restart.
+
+## step 2 Configure Email Notifications
+
+    Click on Manage Jenkins and then Configure system
+    
+    Scroll below till E-mail Notification and click on advanced. Setup up as shown in below screenshot and save it.
+
+You can test configurations by entering recipient email address and clicking on test configuration. If all is good it will show a message - Email sent successfully. You may get error while testing configurations, below is possible errors and solution to it.
+
+Note: **In step 4 you will see the steps to configure email content and set triggers using Extended Email Notification. **
+
+## Step 3 — Configuring Email-Notification in our jobs or pipeline
+
+   1.  Go to your Jenkins home page and click on the created job (Here its gradlerun)
+
+2) Click on Manage Plugins
+
+3) Once your job configuration opens, scroll down to add post-build action and select Email Notifications.
+
+4) Enter recipients and check Send Email for every unstable build and save it.
+
+## Step 4 - Configure Extended Email Notification
+
+From step 2, scroll below till Extended E-mail Notification and setup as shown in the screenshot. You can set your own triggers also, every option or setting in self-explanatory, configure it as per your requirement.
+
+That's it you have successfully configured email settings, Lets set this up in our pipeline or jobs.
+
+## Step 5 — Configure Extended Email Notification in Jenkins job
+
+From step 3 in add post-build action and select Editable Email Notifications.
+
+Once it is added in build action save it.
