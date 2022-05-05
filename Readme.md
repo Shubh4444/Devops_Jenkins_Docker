@@ -1,6 +1,78 @@
 # Jenkins
 
+## step 1
+```
+sudo apt update
+```
+-----------
+```
+sudo apt install openjdk-8-jdk
+```
 
+## step 2
+```
+curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo tee /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+```
+
+## step 3
+```
+sudo apt update
+```
+-------------
+```
+sudo apt install jenkins
+```
+
+-------------------
+```
+sudo systemctl status jenkins
+```
+
+## step 4 
+
+```
+sudo ufw allow 8080
+```
+
+------------------------------
+```
+sudo ufw status
+```
+
+------------------------------
+```
+sudo ufw enable
+```
+
+## step 5
+```
+http://ip_address_or_domain:8080
+```
+
+----------------
+```
+http://localhost:8080
+```
+
+------------------------------
+```
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+```
+
+
+-----------
+Finally 
+3. The system returns an alphanumeric code. Enter that code, then click Continue.
+
+4. Next, you are prompted to either Install suggested plugins or Select plugins to install. It’s fine to simply install the suggested plugins. 
+
+5. Then you will be prompted to Create First Admin User. 
+
+Enter the credentials you want to use for your Jenkins administrator, then Save and Continue.
+
+6. After this, you should set up the Instance Configuration. This is the preferred network address for this Jenkins installation. Confirm the address you want to use for your server. This is most likely the same address you used to get to this configuration page. When you’re satisfied, click Save and Finish.
+
+7. You should see a page that says Jenkins is ready! 
 
 # Deploy Site on Docker 
 
@@ -41,3 +113,33 @@ Run the following command to ensure the server is running:
 ```
 curl localhost:80
 ```
+
+
+# Install Docker Engine
+
+## 
+------------
+```
+ sudo apt-get update
+
+ sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+ ```
+
+---------------
+```
+apt-cache madison docker-ce
+```
+------------------
+
+```
+sudo apt-get install docker-ce=<VERSION_STRING> docker-ce-cli=<VERSION_STRING> containerd.io docker-compose-plugin
+```
+---------
+
+```
+sudo docker run hello-world
+```
+
+
+
+
